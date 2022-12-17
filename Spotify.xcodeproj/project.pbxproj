@@ -12,6 +12,8 @@
 		A0143BCE2948F2A300704629 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0143BCD2948F2A300704629 /* HomeViewController.swift */; };
 		A0143BD32948F2A900704629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0143BD22948F2A900704629 /* Assets.xcassets */; };
 		A0143BD62948F2A900704629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0143BD42948F2A900704629 /* LaunchScreen.storyboard */; };
+		A0D68332294C351000400C0B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D68331294C351000400C0B /* Extensions.swift */; };
+		A0D68334294CBF1D00400C0B /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D68333294CBF1D00400C0B /* AuthResponse.swift */; };
 		A0F2262D294A215700E6D0C6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2262C294A215700E6D0C6 /* AuthViewController.swift */; };
 		A0F2262F294A217900E6D0C6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F2262E294A217900E6D0C6 /* WelcomeViewController.swift */; };
 		A0F22631294A218600E6D0C6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F22630294A218600E6D0C6 /* SettingsViewController.swift */; };
@@ -39,6 +41,8 @@
 		A0143BD22948F2A900704629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0143BD52948F2A900704629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0143BD72948F2A900704629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0D68331294C351000400C0B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A0D68333294CBF1D00400C0B /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		A0F2262C294A215700E6D0C6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A0F2262E294A217900E6D0C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A0F22630294A218600E6D0C6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				A0F22642294A22AD00E6D0C6 /* AudioTrack.swift */,
 				A0F22644294A22D900E6D0C6 /* Artist.swift */,
 				A0F22646294A22EA00E6D0C6 /* UserProfile.swift */,
+				A0D68333294CBF1D00400C0B /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				A0143BC92948F2A300704629 /* AppDelegate.swift */,
 				A0143BCB2948F2A300704629 /* SceneDelegate.swift */,
 				A0143BD22948F2A900704629 /* Assets.xcassets */,
+				A0D68331294C351000400C0B /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 				A0F6A1012949B1550063CFCE /* TabBarViewController.swift in Sources */,
 				A0143BCE2948F2A300704629 /* HomeViewController.swift in Sources */,
 				A0F2263F294A224E00E6D0C6 /* HapticsManager.swift in Sources */,
+				A0D68334294CBF1D00400C0B /* AuthResponse.swift in Sources */,
 				A0F22643294A22AD00E6D0C6 /* AudioTrack.swift in Sources */,
 				A0F2262D294A215700E6D0C6 /* AuthViewController.swift in Sources */,
 				A0143BCA2948F2A300704629 /* AppDelegate.swift in Sources */,
 				A0F6A1052949B1910063CFCE /* LibraryViewController.swift in Sources */,
 				A0F22647294A22EA00E6D0C6 /* UserProfile.swift in Sources */,
+				A0D68332294C351000400C0B /* Extensions.swift in Sources */,
 				A0F22637294A21B200E6D0C6 /* PlaylistViewController.swift in Sources */,
 				A0F22645294A22D900E6D0C6 /* Artist.swift in Sources */,
 				A0143BCC2948F2A300704629 /* SceneDelegate.swift in Sources */,
