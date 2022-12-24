@@ -24,9 +24,15 @@ class TabBarViewController: UITabBarController {
         vc2.navigationItem.largeTitleDisplayMode = .always
         vc3.navigationItem.largeTitleDisplayMode = .always
         
+        
+        
         let nav1 = UINavigationController(rootViewController: vc1)
         let nav2 = UINavigationController(rootViewController: vc2)
         let nav3 = UINavigationController(rootViewController: vc3)
+        
+        nav1.navigationBar.tintColor = .label
+        nav2.navigationBar.tintColor = .label
+        nav3.navigationBar.tintColor = .label
         
         nav1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 1)
