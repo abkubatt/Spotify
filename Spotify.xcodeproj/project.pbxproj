@@ -15,6 +15,9 @@
 		A03446682956BAF300CAB2B8 /* FeaturedPlaylistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03446672956BAF300CAB2B8 /* FeaturedPlaylistsResponse.swift */; };
 		A034466A2956C36700CAB2B8 /* RecommendedGenresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03446692956C36700CAB2B8 /* RecommendedGenresResponse.swift */; };
 		A034466C2956C8A300CAB2B8 /* RecommendationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A034466B2956C8A300CAB2B8 /* RecommendationsResponse.swift */; };
+		A034466F2958495F00CAB2B8 /* NewReleaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A034466E2958495F00CAB2B8 /* NewReleaseCollectionViewCell.swift */; };
+		A03446712958499100CAB2B8 /* FeaturePlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03446702958499100CAB2B8 /* FeaturePlaylistCollectionViewCell.swift */; };
+		A0344673295849BC00CAB2B8 /* RecommendedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0344672295849BC00CAB2B8 /* RecommendedCollectionViewCell.swift */; };
 		A0C8F355294F073B00142D8C /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8F354294F073B00142D8C /* SettingsModels.swift */; };
 		A0C8F358294F149F00142D8C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A0C8F357294F149F00142D8C /* SDWebImage */; };
 		A0C8F35B294F169000142D8C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A0C8F35A294F169000142D8C /* FirebaseAnalytics */; };
@@ -78,6 +81,9 @@
 		A03446672956BAF300CAB2B8 /* FeaturedPlaylistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistsResponse.swift; sourceTree = "<group>"; };
 		A03446692956C36700CAB2B8 /* RecommendedGenresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedGenresResponse.swift; sourceTree = "<group>"; };
 		A034466B2956C8A300CAB2B8 /* RecommendationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsResponse.swift; sourceTree = "<group>"; };
+		A034466E2958495F00CAB2B8 /* NewReleaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A03446702958499100CAB2B8 /* FeaturePlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0344672295849BC00CAB2B8 /* RecommendedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A0C8F354294F073B00142D8C /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		A0D68331294C351000400C0B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A0D68333294CBF1D00400C0B /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 		A0143BDE2948F43600704629 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A034466D2958492900CAB2B8 /* Browse */,
 				A0143BD42948F2A900704629 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -232,6 +239,16 @@
 				A0D68331294C351000400C0B /* Extensions.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A034466D2958492900CAB2B8 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				A034466E2958495F00CAB2B8 /* NewReleaseCollectionViewCell.swift */,
+				A03446702958499100CAB2B8 /* FeaturePlaylistCollectionViewCell.swift */,
+				A0344672295849BC00CAB2B8 /* RecommendedCollectionViewCell.swift */,
+			);
+			path = Browse;
 			sourceTree = "<group>";
 		};
 		A0F2262B294A213600E6D0C6 /* Other */ = {
@@ -364,8 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F6A1032949B16D0063CFCE /* SearchViewController.swift in Sources */,
+				A0344673295849BC00CAB2B8 /* RecommendedCollectionViewCell.swift in Sources */,
 				A0F22641294A229900E6D0C6 /* Playlist.swift in Sources */,
 				A0F22639294A21BF00E6D0C6 /* SearchResultsViewController.swift in Sources */,
+				A03446712958499100CAB2B8 /* FeaturePlaylistCollectionViewCell.swift in Sources */,
 				A0F2262F294A217900E6D0C6 /* WelcomeViewController.swift in Sources */,
 				A0F22633294A219400E6D0C6 /* ProfileViewController.swift in Sources */,
 				A0F6A1012949B1550063CFCE /* TabBarViewController.swift in Sources */,
@@ -377,6 +396,7 @@
 				A034466C2956C8A300CAB2B8 /* RecommendationsResponse.swift in Sources */,
 				A0F2262D294A215700E6D0C6 /* AuthViewController.swift in Sources */,
 				A0143BCA2948F2A300704629 /* AppDelegate.swift in Sources */,
+				A034466F2958495F00CAB2B8 /* NewReleaseCollectionViewCell.swift in Sources */,
 				A0F6A1052949B1910063CFCE /* LibraryViewController.swift in Sources */,
 				A0F22647294A22EA00E6D0C6 /* UserProfile.swift in Sources */,
 				A0D68332294C351000400C0B /* Extensions.swift in Sources */,
