@@ -8,9 +8,9 @@
 import UIKit
 
 enum BrowseSectionType {
-    case newReleases //1
-    case featuredPlaylists //2
-    case recommendedTracks //3
+    case newReleases(viewModels: [NewReleasesCellViewModel]) //1
+    case featuredPlaylists(viewModels: [NewReleasesCellViewModel])//2
+    case recommendedTracks(viewModels: [NewReleasesCellViewModel]) //3
 }
 
 class HomeViewController: UIViewController {
@@ -28,6 +28,8 @@ class HomeViewController: UIViewController {
         spinner.hidesWhenStopped = true
         return spinner
     }()
+    
+    private var sections = [BrowseSectionType]
     
  
     override func viewDidLoad() {
@@ -52,6 +54,9 @@ class HomeViewController: UIViewController {
     private func configureCollectionView() {
         view.addSubview(collectionView)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(NewReleaseCollectionViewCell.self, forCellWithReuseIdentifier: NewReleaseCollectionViewCell.identifier)
+        collectionView.register(FeaturePlaylistCollectionViewCell.self, forCellWithReuseIdentifier: FeaturePlaylistCollectionViewCell.identifier)
+        collectionView.register(RecommendedCollectionViewCell.self, forCellWithReuseIdentifier: RecommendedCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemBackground
@@ -152,6 +157,11 @@ class HomeViewController: UIViewController {
 
     
     private func fetchData() {
+        // New Releases
+        // Featured Playlists
+        
+        
+        // Recommended Tracks
         APICaller.shared.getRecommendationsGenres { result in
             switch result{
             case .success(let model):
@@ -170,6 +180,25 @@ class HomeViewController: UIViewController {
                 break
             }
         }
+        
+        sections.append(.newReleases(viewModels: []))
+        sections.append(.featuredPlaylists(viewModel: []))
+        sections.append(.recommendedTracks(viewModels: []))
+    }
+    
+    private func configureModels(
+    newAlbums: [Album],
+    playlists: [Playlist],
+    tracks: [AudioTrack]
+    ){
+        sections.append(.newReleases(viewModels: newAlbums.compactMap({
+            return NewReleasesCellViewModel(
+                name: $0.name, artworkURL: URL(string: $0.images.first?.url ?? ""), numberOfTracks: $0.total_tracks, artistName: $0.artists.first?.name ?? "-"
+            )
+        })))
+        sections.append(.featuredPlaylists(viewModels: []))
+        sections.append(.recommendedTracks(viewModels: []))
+        collectionView.reloadData()
     }
     
     @objc func didTapSettings() {
@@ -184,7 +213,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        let type = sections[section]
+        switch type {
+        case .newReleases(let viewModels):
+            return viewModels.count
+        case .featuredPlaylists(let viewModels):
+            return viewModels.count
+        case .recommendedTracks(let viewModels):
+            return viewModels.count
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
